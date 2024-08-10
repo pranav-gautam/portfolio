@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pranav Gautam</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <script src="scripts.js" defer></script>
+    <script>
+        // Define experience and projects content as a script
+        const experiences = {
+            tcs: `
+                <div>
+                    <h3>Software Engineer</h3>
+                    <h4>Remote, USA | Aug 2023 – May 2024</h4>
+                    <ul>
+                        <li>Developed a scalable e-commerce platform using Python-based microservices with Django and FastAPI, enhancing the user experience through dynamic frontend components with React.js.</li>
+                        <li>Created a responsive and interactive UI using HTML, CSS, and JavaScript, and streamlined CI/CD processes with Jenkins for automated builds, tests, and deployments.</li>
+                        <li>Featured robust search function, personalized product recommendations, and payment integration, increasing user engagement by 30% and reducing development time by 40% through automation.</li>
+                        <li>Leveraged Docker containerization with AWS Elastic Container Service (ECS) and AWS Fargate, achieving a 50% reduction in infrastructure costs.</li>
+                        <li>Implemented Agile methodologies, enhancing defect management and project delivery efficiency by 70%, while boosting e-commerce sales by 40%.</li>
+                    </ul>
+                </div>
+            `
+        };
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const experienceDetails = document.getElementById("experience-details");
+            const projectDetails = document.getElementById("project-details");
+
+            // Set default content for experience and projects
+            experienceDetails.innerHTML = experiences.tcs; // Default experience
+            projectDetails.innerHTML = projects.featured; // Default project
+
+            // Event listeners for buttons
+            const experienceButtons = document.querySelectorAll(".experience-btn");
+            experienceButtons.forEach(button => {
+                button.addEventListener("click", () => {
+                    const experience = button.getAttribute("data-experience");
+                    experienceDetails.innerHTML = experiences[experience] || "";
+                });
+            });
+
+            const projectTabs = document.querySelectorAll(".project-tab");
+            projectTabs.forEach(tab => {
+                tab.addEventListener("click", () => {
+                    const project = tab.getAttribute("data-project");
+                    projectDetails.innerHTML = projects[project] || "";
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <header id="main-header">
+        <!-- <a href="#top" id="logo">PG</a> -->
+        <a href="#top"><img id="logo-img" src="images/logo.png" alt="PG logo"/></a>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="connect.html">Connect</a></li>
+                <li><a href="Pranav_Gautam_Resume.pdf" target="_blank" class="btn">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section id="intro">
+            <video autoplay muted loop id="background-video">
+                <source src="videos/python-code.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="intro-content">
+                <h1>Pranav Gautam</h1>
+                <p>Results-driven Python Developer with 2 years of experience in developing high-performance web applications, data, analysis, and machine learning data. Proficient in using Python frameworks such as FastAPI and Flask to create clean, maintainable code that meets user needs. Demonstrates strong communication skills and excels in collaborating with cross-functional teams to achieve project goals. Passionate about continuous learning and staying up-to-date with the latest industry trends to drive innovation and provide top-notch solutions.</p>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I am a recent graduate with a Master's Degree in Computer Science from the University of Florida. I am a software developer who delights in building digital experiences that are not only functional but also beautifully designed. My journey in tech has been driven by curiosity and an unwavering commitment to refining my craft. Whether it's bringing an innovative idea to life or optimizing existing solutions, I approach every project with a blend of creativity and technical precision.</p>
+                    <p>Hobbies: I love playing and watching soccer. I love solving problems on <a href="https://leetcode.com/pranav_gautam9" target="_blank">LeetCode</a>.</p>
+                </div>
+                <div class="about-image">
+                    <img src="images/headshot.png" alt="Pranav Gautam">
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Experience</h2>
+            <div class="experience-nav">
+                <button id="experience-tcs" class="experience-btn active" data-experience="tcs">TCS</button>
+                <button id="experience-maxgen" class="experience-btn" data-experience="maxgen">Maxgen Technologies</button>
+                <button id="experience-alliant" class="experience-btn" data-experience="alliant">Alliant Infotech</button>
+            </div>
+            <div id="experience-details">
+                <!-- Default content set by inline JavaScript -->
+            </div>
+        </section>
+
+        <section id="projects">
+            
+            <h2>Projects</h2>
+                <div class="projects-buttons">
+                    <button id="featured-projects-button" class="active">Featured</button>
+                    <button id="all-projects-button">All</button>
+                </div>
+                    
+                <!-- Featured Projects Section -->
+                <div id="featured-projects" class="projects-grid">
+                    <div class="project-card">
+                        <img src="images/healthtrack.jpg" alt="HealthTrack">
+                        <h3>HealthTrack</h3>
+                        <p>Web-based remote patient monitoring system.</p>
+                        <a href="https://github.com/pranav-gautam/healthtrack" target="_blank">View Project</a>
+                    </div>
+                    <div class="project-card">
+                        <img src="images/realestate.jpg" alt="Real Estate Price Prediction">
+                        <h3>Real Estate Price Prediction</h3>
+                        <p>Web-based application for predicting accurate property prices.</p>
+                        <a href="https://github.com/pranav-gautam/real-estate-price-prediction" target="_blank">View Project</a>
+                    </div>
+                    <div class="project-card">
+                        <img src="images/visionguide.avif" alt="VisionGuide">
+                        <h3>VisionGuide</h3>
+                        <p>Android application designed to provide real-time assistance.</p>
+                        <a href="https://github.com/pranav-gautam/visionguide" target="_blank">View Project</a>
+                    </div>
+                    <div class="project-card">
+                        <img src="images/readytoeat.jpg" alt="Ready-to-eat">
+                        <h3>Ready-to-eat</h3>
+                        <p>Web-based application for food ordering from the cafeteria.</p>
+                        <a href="https://github.com/pranav-gautam/ready-to-eat" target="_blank">View Project</a>
+                    </div>
+                </div>
+                    
+                <!-- All Projects Section -->
+                <div id="all-projects" class="projects-grid" style="display: none;">
+                    <div class="project-card">
+                        <img src="images/healthtrack.jpg" alt="HealthTrack">
+                        <h3>HealthTrack</h3>
+                        <p>Web-based remote patient monitoring system.</p>
+                        <a href="https://github.com/pranav-gautam/healthtrack" target="_blank">View Project</a>
+                    </div>
+                    <div class="project-card">
+                        <img src="images/gatortaxi.png" alt="GatorTaxi">
+                        <h3>GatorTaxi</h3>
+                        <p>Software to efficiently manage ride requests.</p>
+                        <a href="https://github.com/pranav-gautam/gator-taxi" target="_blank">View Project</a>
+                    </div>
+                    <div class="project-card">
+                        <img src="images/twitterclone.png" alt="Twitter Clone">
+                        <h3>Twitter Clone</h3>
+                        <p>Social-media platform designed to emulate the functionality of Twitter.</p>
+                        <a href="https://github.com/pranav-gautam/twitter-clone" target="_blank">View Project</a>
+                    </div>
+                    <div class="project-card">
+                        <img src="images/bitcoinminer.png" alt="Bitcoin Miner">
+                        <h3>Bitcoin Miner</h3>
+                        <p>A distributed computing program to stress test a bitcoin mining server.</p>
+                        <a href="https://github.com/pranav-gautam/bitcoin-miner" target="_blank">View Project</a>
+                    </div>
+                    <div class="project-card">
+                        <img src="images/realestate.jpg" alt="Real Estate Price Prediction">
+                        <h3>Real Estate Price Prediction</h3>
+                        <p>Web-based application for predicting accurate property prices.</p>
+                        <a href="https://github.com/pranav-gautam/real-estate-price-prediction" target="_blank">View Project</a>
+                    </div>
+                    <div class="project-card">
+                        <img src="images/visionguide.avif" alt="VisionGuide">
+                        <h3>VisionGuide</h3>
+                        <p>Android application designed to provide real-time assistance.</p>
+                        <a href="https://github.com/pranav-gautam/visionguide" target="_blank">View Project</a>
+                    </div>
+                    <div class="project-card">
+                        <img src="images/readytoeat.jpg" alt="Ready-to-eat">
+                        <h3>Ready-to-eat</h3>
+                        <p>Web-based application for food ordering from the cafeteria.</p>
+                        <a href="https://github.com/pranav-gautam/ready-to-eat" target="_blank">View Project</a>
+                    </div>
+                    <div class="project-card">
+                        <img src="images/coursecalendar.jpg" alt="Course Calendar">
+                        <h3>Course Calendar</h3>
+                        <p>Web application for students to manage class schedules.</p>
+                        <a href="https://github.com/pranav-gautam/coursecalendar" target="_blank">View Project</a>
+                    </div>
+                </div>
+        </section>
+    </main>
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-card">
+                <!-- <a id="footer-logo">PG</a> -->
+                <img id="footer-logo-img" src="images/logo.png" alt="PG logo"/>
+            </div>
+            <div class="footer-card">
+                <p>Edison, NJ</p>
+                <p>pranavgautam0920@gmail.com</p>
+                <p>(352) 740-6203</p>
+            </div>
+        </div>
+        <div class="footer-social-links">
+            <a href="https://www.linkedin.com/in/pranav-gautam9/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/pranav-gautam" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/pranav_gautam/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect - Pranav Gautam</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="scripts.js" defer></script>
+    <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+<body>
+    <header id="connect-header">
+        <!-- <a href="#top" id="logo">PG</a> -->
+        <a href="#top"><img id="logo-img" src="images/logo.png" alt="PG logo"/></a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="connect-content">
+        <section id="contact-form">
+          <div class="connect-container">
+            <div class="connect-card">
+                <h1 style="color: #FFF;">If you think I'd be a good fit for your team, drop me a message and let's chat!</h1>
+            </div>
+            <div class="connect-card">
+                <form id="contact" method="POST">
+                    <label for="first-name" style="margin-top: 10px">First Name</label>
+                    <input type="text" id="first-name" name="first-name" required>
+                    
+                    <label for="last-name" style="margin-top: 10px">Last Name</label>
+                    <input type="text" id="last-name" name="last-name" required>
+                    
+                    <label for="email" style="margin-top: 10px">Email</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="subject" style="margin-top: 10px">Subject</label>
+                    <input type="text" id="subject" name="subject" required>
+                    
+                    <label for="message" style="margin-top: 10px">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                    
+                    <button type="submit" class="btn" style="margin-top: 20px; font-size: 18px;">Send</button>
+                </form>
+                <!-- <p id="thank-you" style="display:none;">Thank you! I will get back to you soon.</p> -->
+            </div>
+          </div>
+          <div id="formResponse" style="display:none;"><h3 style="font-size: 50px;">Thank you! I will get back to you soon.</h3></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-card">
+                <!-- <a id="footer-logo">PG</a> -->
+                <img id="footer-logo-img" src="images/logo.png" alt="PG logo"/>
+            </div>
+            <div class="footer-card">
+                <p>Edison, NJ</p>
+                <p>pranavgautam0920@gmail.com</p>
+                <p>(352) 740-6203</p>
+            </div>
+        </div>
+        <div class="footer-social-links">
+            <a href="https://www.linkedin.com/in/pranav-gautam9/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/pranav-gautam" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/pranav_gautam/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+</body>
+</html>
