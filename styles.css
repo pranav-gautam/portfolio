@@ -129,7 +129,18 @@ h1, h2 {
     object-fit: cover;
     opacity: 0.75;
     z-index: -1;
+    pointer-events: none;
 }
+
+#background-video::-webkit-media-controls {
+    display: none !important; /* Hide media controls in WebKit-based browsers */
+}
+
+#background-video::-moz-media-controls {
+    display: none !important; /* Hide media controls in Mozilla-based browsers */
+}
+
+
 
 .intro-content {
     position: relative;
